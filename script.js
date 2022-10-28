@@ -23,6 +23,22 @@ function writePassword() {
   var useSpecial = prompt("Would you like to include speical characters?  yes/no");
   var useNumeric = prompt("Would you like to include numeric characters?  yes/no");
   
+  var pass = ""
+  if(useUpperCase==="yes"){
+    pass += alphaUpper
+  }
+  if(useLowerCase==="yes"){
+    pass += alphaLower
+  }
+  if(useSpecial==="yes"){
+    pass += symbols
+  }
+  if(useNumeric==="yes"){
+    pass += numbers
+  }
+  if(useUpperCase==="no" && useLowerCase==="no" && useSpecial==="no" && useNumeric==="no"){
+    alert("select atleast one");
+  }
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
