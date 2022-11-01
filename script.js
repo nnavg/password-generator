@@ -20,7 +20,7 @@ function writePassword() {
 
   var useUpperCase = prompt("Would you like to include uppercase letters?  yes/no");
   var useLowerCase = prompt("Would you like to include lowercase letters?  yes/no");
-  var useSpecial = prompt("Would you like to include speical characters?  yes/no");
+  var useSpecial = prompt("Would you like to include special characters?  yes/no");
   var useNumeric = prompt("Would you like to include numeric characters?  yes/no");
   
   var pass = ""
@@ -40,7 +40,16 @@ function writePassword() {
     alert("select atleast one");
   }
 
-  var password = generatePassword();
+  var password = ""
+  for(var i=0; i < newlength ; i++)
+  {
+    console.log(i)
+    var character = Math.floor(Math.random()*pass.length);
+    console.log(password)
+    password += pass(character);
+    console.log(pass)
+  }
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
